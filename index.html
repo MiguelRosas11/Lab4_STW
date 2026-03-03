@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <title>Disci-App</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
-
 <body>
 
-    <div class = "container">
+    <div class="container">
+
         <div class="profile">
+
             <div class="avatar-wrap">
-                <img id="avatarImg" class="avatar" src="assets/lv1.gif" alt="Avatar">
+                <img id="avatarImg" class="avatar" src="assets/novato.png" alt="Avatar">
             </div>
 
-            <h2 id="className">Aprendiz</h2>
+            <h2 id="className">Novato</h2>
 
             <div class="profile-stats">
                 <p id="levelName">Nivel 1</p>
@@ -26,15 +28,15 @@
                 <div id="xpFill" class="xp-fill"></div>
             </div>
 
-            <p id="nextGoal" class="next-goal">Siguiente nivel en 50 XP</p>
+            <p id="nextGoal" class="next-goal">
+                Siguiente nivel en 50 XP
+            </p>
+
         </div>
 
 
-
-
-
-
         <div class="box add">
+
             <h2>Agrega una misión</h2>
 
             <div class="add-grid">
@@ -49,6 +51,7 @@
 
                 <div class="add-right">
                     <label for="dificultad">Dificultad:</label>
+
                     <select id="dificultad">
                         <option value="facil">Fácil</option>
                         <option value="normal">Normal</option>
@@ -57,17 +60,21 @@
 
                     <button id="btnCrear">Crear</button>
                 </div>
+
             </div>
+
         </div>
 
 
         <div class="box missions">
-            <div id="listaMisiones"></div>
+            <div id="listaMisiones" class="missions-list"></div>
         </div>
 
     </div>
 
-</body>
 
+    <script src="js/app.js"></script>
+
+</body>
 
 </html>
