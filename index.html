@@ -5,59 +5,67 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
-    <div class="profile">
-        <div class="profile-top">
+
+    <div class = "container">
+        <div class="profile">
             <div class="avatar-wrap">
                 <img id="avatarImg" class="avatar" src="assets/lv1.gif" alt="Avatar">
             </div>
 
-            <div class="profile-info">
-                <h2 id="className">Aprendiz</h2>
+            <h2 id="className">Aprendiz</h2>
+
+            <div class="profile-stats">
                 <p id="levelName">Nivel 1</p>
                 <p id="xpText">XP: 0 / 50</p>
             </div>
+
+            <div class="xp-bar">
+                <div id="xpFill" class="xp-fill"></div>
+            </div>
+
+            <p id="nextGoal" class="next-goal">Siguiente nivel en 50 XP</p>
         </div>
 
-        <div class="xp-bar">
-            <div id="xpFill" class="xp-fill"></div>
+
+
+
+
+
+        <div class="box add">
+            <h2>Agrega una misión</h2>
+
+            <div class="add-grid">
+
+                <div class="add-left">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Nombre de la misión">
+
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" placeholder="Descripción de la misión">
+                </div>
+
+                <div class="add-right">
+                    <label for="dificultad">Dificultad:</label>
+                    <select id="dificultad">
+                        <option value="facil">Fácil</option>
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+
+                    <button id="btnCrear">Crear</button>
+                </div>
+            </div>
         </div>
 
-        <p id="nextGoal" class="next-goal">Siguiente nivel en 50 XP</p>
+
+        <div class="box missions">
+            <div id="listaMisiones"></div>
+        </div>
+
     </div>
-
-
-
-
-
-
-<div class="box">
-    <h2>Agrega una misión</h2>
-
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" placeholder="Nombre de la misión">
-
-    <label for="descripción">Descripción:</label>
-    <input type="text" id="descripción" placeholder="Descripción de la misión">
-
-
-    <label for="dificultad">Dificultad:</label>
-
-    <select id="dificultad">
-        <option value="facil">Fácil</option>
-        <option value="normal">Normal</option>
-        <option value="dificil">Difícil</option>
-    </select>
-
-
-    <button>Crear misión</button>
-
-</div>
-
-<div class="box">
-    <div id="listaMisiones">
-    </div>
-</div>
 
 </body>
 

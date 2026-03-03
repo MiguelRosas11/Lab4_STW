@@ -1,0 +1,173 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px;
+}
+
+/* contenedor vertical que aprovecha ancho y alto de pantalla */
+.container {
+  width: min(980px, 94vw);     /* aprovecha ancho, con margen */
+  height: calc(100vh - 36px);  /* ocupa pantalla menos padding */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* PROFILE: todo centrado y compacto */
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra horizontal */
+  text-align: center;    /* centra texto */
+  gap: 6px;              /* más compacto */
+}
+
+/* Avatar más grande */
+.avatar-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Ajuste fino de textos */
+.profile h2 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;  /* centra el bloque */
+  gap: 28px;                /* separación entre nivel y XP */
+  margin: 0;
+}
+
+.profile-stats p {
+  margin: 0;
+}
+
+/* Barra XP centrada y compacta */
+.xp-bar {
+  width: min(620px, 100%);  /* aprovecha ancho pero centrada */
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.next-goal {
+  margin: 0;
+}
+
+/* BOX con borde costura */
+.box {
+  width: 100%;
+  border: 2px dashed black;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Box agregar misión: compacta */
+.box.add {
+  gap: 12px;
+}
+
+/* grid de 2 columnas */
+.add-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.32fr; /* ~76% / 24% */
+  gap: 14px;
+  align-items: end; /* alinea el botón abajo */
+}
+
+/* cada columna en vertical */
+.add-left,
+.add-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* que el botón no se vea gigante */
+.add-right button {
+  width: 100%;
+}
+
+/* responsive: en pantallas pequeñas vuelve a 1 columna */
+@media (max-width: 650px) {
+  .add-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  border: 2px solid black;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f2f2f2;
+}
+
+/* Caja misiones: que use el espacio restante de la pantalla */
+.box.missions {
+  flex: 1;              /* clave: toma el alto sobrante */
+  min-height: 180px;    /* evita que se haga demasiado pequeña */
+  display: flex;
+  flex-direction: column;
+}
+
+/* lista con scroll interno (el único scroll) */
+.missions-list {
+  flex: 1;
+  overflow-y: auto;                 /* scroll solo aquí */
+  border-top: 2px dashed black;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* misión individual */
+.mission {
+  border: 2px dashed black;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
